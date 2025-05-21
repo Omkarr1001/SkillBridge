@@ -1,0 +1,4 @@
+If the folders are empty or not inside this directory:
+Move them inside the SkillBridge folder.
+
+Add a simple file in each folder (like test.txt with some content).
