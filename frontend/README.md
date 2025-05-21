@@ -68,3 +68,93 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+ 1. What it Does
+SkillBridge is a full-stack web application designed to connect learners with curated skill development resources. The application allows users to:
+
+Browse courses or resources
+
+View front-end content (static or dynamic UI)
+
+Eventually support backend APIs for handling data (like user info, course details, etc.)
+
+✅ 2. How to Run Frontend and Backend Locally
+To run the app locally on your machine, follow these steps:
+
+🖥 Backend (Spring Boot)
+📁 Directory: backend/demo (1)/demo
+
+➤ Prerequisites:
+Java JDK (17 or higher)
+
+Gradle (wrapper is already included)
+
+➤ Steps:
+Open terminal (cmd or Git Bash):
+
+Navigate to the Spring Boot project directory:
+
+bash
+Copy
+
+Edit
+cd "backend/demo (1)/demo"
+Run the Spring Boot application using Gradle wrapper:
+
+bash
+Copy
+
+Edit
+gradlew.bat bootRun
+If everything is set up correctly, Spring Boot will start the server at:
+
+arduino
+Copy
+
+Edit
+http://localhost:8080
+🌐 Frontend (React)
+📁 Directory: frontend/
+
+➤ Prerequisites:
+Node.js and npm installed
+
+➤ Steps:
+Open a new terminal window (do not close backend one).
+
+Navigate to the frontend directory:
+
+bash
+Copy
+
+Edit
+cd frontend
+Install dependencies:
+
+bash
+Copy
+
+Edit
+npm install
+Start the React app:
+
+bash
+Copy
+
+Edit
+npm start
+Your frontend will open in the browser at:
+
+arduino
+Copy
+
+Edit
+http://localhost:3000
+✅ 3. Technologies Used
+Layer	Technology
+Frontend	React (JavaScript, JSX)
+Backend	Java Spring Boot (REST API)
+Build Tool (Backend)	Gradle
+Project Structure	Separated frontend and backend folders
+Package Manager (Frontend)	npm
