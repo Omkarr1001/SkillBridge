@@ -1,8 +1,18 @@
-/target
-/node_modules
-*.log
+# Node modules
+node_modules/
+frontend/node_modules/
+
+# Java build output
+target/
 *.class
-*.jar
-.DS_Store
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Environment
 .env
- 
