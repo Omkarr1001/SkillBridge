@@ -2,7 +2,7 @@ name: Build and Deploy to Render
 
 on:
   push:
-    branches: [ main ]  # Runs when you push to the main branch
+    branches: [ main ]
 
 jobs:
   build:
@@ -19,6 +19,7 @@ jobs:
           distribution: 'temurin'
 
       - name: Build with Maven
+        working-directory: backend/demo1
         run: mvn clean install -DskipTests
 
   deploy:
