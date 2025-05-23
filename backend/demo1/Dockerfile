@@ -1,5 +1,6 @@
 # Stage 1: Build the app
-FROM maven:3.8.5-openjdk-17 AS build
+FROM maven:3.8.5-openjdk-21 AS build
+
 
 # Set working directory to where the pom.xml exists
 WORKDIR /app/backend/demo1
@@ -11,7 +12,8 @@ COPY backend/demo1/ .
 RUN mvn clean package -DskipTests
 
 # Stage 2: Run the app
-FROM openjdk:17-jdk-slim
+FROM openjdk:21-jdk-slim
+
 
 WORKDIR /app
 
