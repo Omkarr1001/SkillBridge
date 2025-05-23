@@ -1,24 +1,10 @@
-# Stage 1: Build the app
-FROM maven:3.8.5-openjdk-21 AS build
-
-
-# Set working directory to where the pom.xml exists
-WORKDIR /app/backend/demo1
-
-# Copy only the backend/demo1 folder contents into the container
-COPY backend/demo1/ .
-
-# Build the project skipping tests
-RUN mvn clean package -DskipTests
-
-# Stage 2: Run the app
-FROM openjdk:21-jdk-slim
-
+FROM maven:3.9.6-eclipse-temurin-21
 
 WORKDIR /app
 
-# Copy the jar from the build stage
-COPY --from=build /app/backend/demo1/target/demo1-0.0.1-SNAPSHOT.jar app.jar
+COPY pom.xml .
+RUN mvn dependency:go-offline -B
 
-# Run the jar
-ENTRYPOINT ["java", "-jar", "app.jar"]
+COPY src ./src
+
+CMD ["mvn", "spring-boot:run"]
