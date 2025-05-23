@@ -37,3 +37,5 @@ SkillBridge is a platform that connects learners with mentors for one-on-one ski
 - Session scheduling
  
 63ab4b4 (Initial commit with updated folder structure)
+## Live Backend URL
+[Click here to test the API](https://skillbridge-3k0p.onrender.com/api/hello)
